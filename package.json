@@ -1,0 +1,44 @@
+{
+  "name": "tiny_weather_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec ts-node src/index.ts",
+    "build": "ttsc -P tsconfig.json",
+    "lint:fix": "eslint --fix src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmbelkiman/tiny_weather_backend.git"
+  },
+  "keywords": [],
+  "author": "Marcelo Belkiman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmbelkiman/tiny_weather_backend/issues"
+  },
+  "homepage": "https://github.com/mmbelkiman/tiny_weather_backend#readme",
+  "dependencies": {
+    "apollo-server-express": "^3.12.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "graphql": "^16.8.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.14",
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.5.9",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3",
+    "ts-node": "^10.9.1",
+    "ttypescript": "^1.5.12",
+    "typescript": "^5.2.2"
+  }
+}
