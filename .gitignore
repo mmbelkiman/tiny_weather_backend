@@ -22,7 +22,6 @@ dist
 # dotenv environment variable files
 *.env
 .env
-!default.env
 
 #misc
 .DS_Store
