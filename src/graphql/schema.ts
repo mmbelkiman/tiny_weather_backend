@@ -8,7 +8,7 @@ export const typeDefs = gql`
 
   type Weather {
     coord: Coord
-    weather: [WeatherDescription]
+    weather: WeatherDescription
     base: String
     main: MainWeather
     visibility: Int

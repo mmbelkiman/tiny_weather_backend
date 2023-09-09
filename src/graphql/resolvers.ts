@@ -6,18 +6,31 @@ export const resolvers = {
     getWeather: async (_: void, { cityName }: { cityName: string }) => {
       const weatherData = await getWeatherData(cityName);
 
+      const weatherInside: {
+        id: number;
+        main: string | null;
+        description: string | null;
+        icon: string | null;
+      } = weatherData.weather[0] || {
+        id: '-1',
+        main: null,
+        description: null,
+        icon: null,
+      };
+
       return {
         coord: {
           lon: weatherData.coord.lon,
           lat: weatherData.coord.lat,
         },
         weather: {
-          id: weatherData.weather[0].id,
-          main: weatherData.weather[0].main,
-          description: weatherData.weather[0].description,
-          icon: weatherData.weather[0].icon,
+          id: weatherInside.id,
+          main: weatherInside.main,
+          description: weatherInside.description,
+          icon: weatherInside.icon,
         },
         base: weatherData.base,
+
         main: {
           temp: weatherData.main.temp,
           feels_like: weatherData.main.feels_like,
